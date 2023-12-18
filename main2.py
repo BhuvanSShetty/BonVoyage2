@@ -54,57 +54,51 @@ def show_destination_page(selected_destination):
 
 def show_cubbon_park_page():
 cubbon_park_window = Toplevel(root)
-    cubbon_park_window.title("Cubbon Park")
+cubbon_park_window.title("Cubbon Park")
 
-    canvas = Canvas(cubbon_park_window, width=600, height=400, scrollregion=(0, 0, 2000, 2000))
-    scrollbar = Scrollbar(cubbon_park_window, command=canvas.yview, troughcolor="light gray", activerelief=tk.GROOVE,
-                          width=20, orient="vertical")
-    canvas.config(yscrollcommand=scrollbar.set)
-    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-    canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+canvas = Canvas(cubbon_park_window, width=600, height=400, scrollregion=(0, 0, 2000, 2000))
+scrollbar = Scrollbar(cubbon_park_window, command=canvas.yview, troughcolor="light gray", activerelief=tk.GROOVE, width=20, orient="vertical")
+canvas.config(yscrollcommand=scrollbar.set)
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-   
-    frame = tk.Frame(canvas)
-    canvas.create_window((0, 0), window=frame, anchor=tk.NW)
+# Create a frame inside the canvas to contain all widgets
+frame = tk.Frame(canvas)
+canvas.create_window((0, 0), window=frame, anchor=tk.NW)
 
-    heading_label = tk.Label(frame, text="Discover the Beauty of Cubbon Park", font=("Great vibes", 40), fg="purple")
-    heading_label.pack(padx=20, pady=20)
+heading_label = tk.Label(frame, text="Discover the Beauty of Cubbon Park", font=("Great vibes", 40), fg="purple")
+heading_label.pack(padx=20, pady=20)
 
-    info_label = tk.Label(frame,
-                          text="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCubbon Park dons many hats: a green lung in the heart of the city that also hosts a library, museums, a tennis academy, an aquarium, a toy train, and many statues and pavilions. It’s probably one of the only parks to have a busy road cutting through it. In the wee hours of the morning or evenings, it’s a jogger’s paradise. Spring adds to the beauty of this park, with the lovely and colorful Tabebuia trees in full bloom.",
-                          font=("Great Vibes", 16), fg="red", wraplength=1000, justify=tk.LEFT)
-    info_label.pack(padx=20, pady=20)
+info_label = tk.Label(frame, text="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCubbon Park dons many hats: a green lung in the heart of the city that also hosts a library, museums, a tennis academy, an aquarium, a toy train, and many statues and pavilions. It’s probably one of the only parks to have a busy road cutting through it. In the wee hours of the morning or evenings, it’s a jogger’s paradise. Spring adds to the beauty of this park, with the lovely and colorful Tabebuia trees in full bloom.",
+                     font=("Great Vibes", 16), fg="red", wraplength=1000, justify=tk.LEFT)
+info_label.pack(padx=20, pady=20)
 
-    additional_info_label = tk.Label(frame,
-                                     text="\n\n\n\n\n\n\nWeather : 20 - 27°C\nLabel : Must Visit\nTags : Garden & Park\nTimings : 6:00 AM - 6:00 PM\nClosed on Mondays and second Tuesdays of Every month.\nStrictly for morning walkers: 6:00 AM - 8:00 AM\nTime Required : 1 - 2 hours\nEntry Fee : Free\n",
-                                     font=("Great Vibes", 12), fg="dark green", wraplength=500, justify=tk.LEFT)
-    additional_info_label.pack(padx=20, pady=20)
+additional_info_label = tk.Label(frame, text="\n\n\n\n\n\n\nWeather : 20 - 27°C\nLabel : Must Visit\nTags : Garden & Park\nTimings : 6:00 AM - 6:00 PM\nClosed on Mondays and second Tuesdays of Every month.\nStrictly for morning walkers: 6:00 AM - 8:00 AM\nTime Required : 1 - 2 hours\nEntry Fee : Free\n",
+                                  font=("Great Vibes", 12), fg="dark green", wraplength=500, justify=tk.LEFT)
+additional_info_label.pack(padx=20, pady=20)
 
-    additional_info_label = tk.Label(frame,
-                                     text="Things To Do In Cubbon Park:\nA gentle amalgam of natural and man-made sights, Cubbon Park has multicoloured exotic floral beds lining its various avenues which are located close to important administrative buildings like:\n\n• Central Public Library\n• Government Museum\n• Sir Vishweshwariah Industrial and Technological Museum\n• Karnataka High Court\n• Venkatappa Art Gallery",
-                                     font=("Great Vibes", 12), fg="blue", wraplength=800, justify=tk.LEFT)
-    additional_info_label.pack(padx=20, pady=20)
+additional_info_label = tk.Label(frame, text="Things To Do In Cubbon Park:\nA gentle amalgam of natural and man-made sights, Cubbon Park has multicoloured exotic floral beds lining its various avenues which are located close to important administrative buildings like:\n\n• Central Public Library\n• Government Museum\n• Sir Vishweshwariah Industrial and Technological Museum\n• Karnataka High Court\n• Venkatappa Art Gallery",
+                                  font=("Great Vibes", 12), fg="blue", wraplength=800, justify=tk.LEFT)
+additional_info_label.pack(padx=20, pady=20)
 
-    additional_info_label = tk.Label(frame,
-                                     text="""LOCATION :\nCubbon Park\nIn the heart of the city’s business hub is Bangalore’s most favourite garden. Cubbon Park is a beautifully maintained 120-hectare garden where all the local residents of the city take a break. A landmark ‘lung’ area of Bengaluru, the gardens are dotted with a lot of colonial heritage and charm, which are today a part of the state capital’s political centre. Home to the red-painted Gothic style State Central Library, the magnificent Vidhan Souda built in Mysore Neo-Dravidian architectural style, the neoclassical Attara Kacheri built in 1864 and housing the High Court, oldest museums and GPO in its vicinity, a trip to Cubbon Park is a great heritage walk. Sundays at the park are quite a treat with a plethora of activities to choose from - concerts, fun runs, yoga, tiny farmers market, the list is endless.""",
-                                     font=("Great Vibes", 10), fg="maroon", wraplength=800, justify=tk.LEFT)
-    additional_info_label.pack(padx=20, pady=20)
+additional_info_label = tk.Label(frame, text="""LOCATION :\nCubbon Park\nIn the heart of the city’s business hub is Bangalore’s most favourite garden. Cubbon Park is a beautifully maintained 120-hectare garden where all the local residents of the city take a break. A landmark ‘lung’ area of Bengaluru, the gardens are dotted with a lot of colonial heritage and charm, which are today a part of the state capital’s political centre. Home to the red-painted Gothic style State Central Library, the magnificent Vidhan Souda built in Mysore Neo-Dravidian architectural style, the neoclassical Attara Kacheri built in 1864 and housing the High Court, oldest museums and GPO in its vicinity, a trip to Cubbon Park is a great heritage walk. Sundays at the park are quite a treat with a plethora of activities to choose from - concerts, fun runs, yoga, tiny farmers market, the list is endless.""",
+                                  font=("Great Vibes", 10), fg="maroon", wraplength=800, justify=tk.LEFT)
+additional_info_label.pack(padx=20, pady=20)
 
-    
-    image_paths = [
-        r"images\cub1.jpg",
-        r"images\cub2.jpg",
-        r"images\cub3.jpg",
-        r"images\cub4.jpg",
-        r"images\cub6.jpg"
-    ]
+# Example: Display multiple images
+image_paths = [
+    r"images\cub1.jpg",
+    r"images\cub2.jpg",
+    r"images\cub3.jpg",
+    r"images\cub4.jpg",
+    r"images\cub6.jpg"
+]
 
-   
-    images = [PhotoImage(file=image) for image in image_paths]
-    current_image_index = 0
-    current_image_label = tk.Label(frame, image=images[current_image_index])
-    current_image_label.pack()
-
+# Load and display images inside the frame
+images = [PhotoImage(file=image) for image in image_paths]
+current_image_index = 0
+current_image_label = tk.Label(frame, image=images[current_image_index])
+current_image_label.pack()
     def show_next_image():
         nonlocal current_image_index, current_image_label
         # Destroy the previous image label if it exists
